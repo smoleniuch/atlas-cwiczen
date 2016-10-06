@@ -28,14 +28,14 @@ var mainHeader = document.getElementById("main-header");
 function changeHeaderValue(){
 	
 	var newHeader = prompt("Please,type new name","Atlas");
-	
-	mainHeader.innerHTML = newHeader;
+	localStorage.setItem("headerValue",newHeader);
+	mainHeader.innerHTML = localStorage.getItem("headerValue");
 	
 	
 }
 
 button[0].addEventListener("click",changeHeaderValue);
-if(newHeader != undefined){
+if(localStorage.getItem("headerValue") != null){
 	
 	mainHeader.innerHTML = newHeader;
 	
