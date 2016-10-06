@@ -37,7 +37,7 @@ function changeHeaderValue(){
 button[0].addEventListener("click",changeHeaderValue);
 if(localStorage.getItem("headerValue") != null){
 	
-	mainHeader.innerHTML = newHeader;
+	mainHeader.innerHTML = localStorage.getItem("headerValue");
 	
 }
 console.log(button.addEventListener == true);
